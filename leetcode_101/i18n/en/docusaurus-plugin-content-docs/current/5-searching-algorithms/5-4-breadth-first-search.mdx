@@ -8,9 +8,9 @@ sidebar_position: 24
 
 
 ```
-   1
-  / \
-  2 3
+    1
+   / \
+  2   3
  /
 4
 ```
@@ -96,7 +96,7 @@ def shortestPathBinaryMatrix(grid: List[List[int]]) -> int:
     dist = 0
     q = collections.deque()
     q.append((0, 0))
-    grid[0][0] = -1 # -1 indicates visited
+    grid[0][0] = -1 # -1表示visited
     count = len(q)
     while count > 0:
         dist += 1
@@ -109,11 +109,11 @@ def shortestPathBinaryMatrix(grid: List[List[int]]) -> int:
                 for dy in range(-1, 2):
                     if dx == 0 and dy == 0:
                         continue
-                x, y = r + dx, c + dy
-                if x < 0 or y < 0 or x >= m or y >= n or grid[x][y] != 0:
-                    continue
-                grid[x][y] = -1
-                q.append((x, y))
+                    x, y = r + dx, c + dy
+                    if x < 0 or y < 0 or x >= m or y >= n or grid[x][y] != 0:
+                        continue
+                    grid[x][y] = -1
+                    q.append((x, y))
         count = len(q)
     return -1
 ```

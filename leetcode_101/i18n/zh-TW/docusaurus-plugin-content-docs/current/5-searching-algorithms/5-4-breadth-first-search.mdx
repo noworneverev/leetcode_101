@@ -8,9 +8,9 @@ sidebar_position: 24
 
 
 ```
-   1
-  / \
-  2 3
+    1
+   / \
+  2   3
  /
 4
 ```
@@ -108,11 +108,11 @@ def shortestPathBinaryMatrix(grid: List[List[int]]) -> int:
                 for dy in range(-1, 2):
                     if dx == 0 and dy == 0:
                         continue
-                x, y = r + dx, c + dy
-                if x < 0 or y < 0 or x >= m or y >= n or grid[x][y] != 0:
-                    continue
-                grid[x][y] = -1
-                q.append((x, y))
+                    x, y = r + dx, c + dy
+                    if x < 0 or y < 0 or x >= m or y >= n or grid[x][y] != 0:
+                        continue
+                    grid[x][y] = -1
+                    q.append((x, y))
         count = len(q)
     return -1
 ```
@@ -120,6 +120,12 @@ def shortestPathBinaryMatrix(grid: List[List[int]]) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n^2)$，最差情況下需遍歷整個棋盤，其中 $n$ 為棋盤的邊長。
+- **空間複雜度**: $O(n^2)$，主要來自佇列 `q` 和訪問標記。
+
 
 ## [934. Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)
 
@@ -265,6 +271,11 @@ def shortestBridge(grid: List[List[int]]) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n^2)$，其中 $n$ 是棋盤的邊長。DFS 遍歷第一個島嶼需要 $O(n^2)$，BFS 最多遍歷剩餘的格子，也需要 $O(n^2)$。
+- **空間複雜度**: $O(n^2)$，主要來自 `deque` 儲存邊界點，以及遞迴調用的堆疊空間。
 
 ## [126. Word Ladder II](https://leetcode.com/problems/word-ladder-ii/)
 
@@ -454,3 +465,11 @@ def findLadders(beginWord: str, endWord: str,
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(N \times M^2)$，其中 $N$ 是單詞數量，$M$ 是單詞的長度。
+  - 每個單詞的鄰居生成需要 $O(M \times 26)$ 次檢查。
+  - BFS 最多需要處理 $N$ 個單詞。
+
+- **空間複雜度**: $O(N \times M)$，主要來自 `next_words` 字典和 BFS 佇列。

@@ -7,9 +7,9 @@ sidebar_position: 24
 `广度优先搜索`（breadth-ﬁrst search，BFS）不同与深度优先搜索，它是一层层进行遍历的，因此`需要用先入先出的队列 (queue)` 而非先入后出的栈 (stack) 进行遍历。由于是按层次进行遍历，广度优先搜索时按照“广”的方向进行遍历的，也常常用来处理最短路径等问题。在 Python 中，我们可以用 collections.deque 来实现 C++ 中的 queue。
 
 ```
-   1
-  / \
-  2 3
+    1
+   / \
+  2   3
  /
 4
 ```
@@ -106,11 +106,11 @@ def shortestPathBinaryMatrix(grid: List[List[int]]) -> int:
                 for dy in range(-1, 2):
                     if dx == 0 and dy == 0:
                         continue
-                x, y = r + dx, c + dy
-                if x < 0 or y < 0 or x >= m or y >= n or grid[x][y] != 0:
-                    continue
-                grid[x][y] = -1
-                q.append((x, y))
+                    x, y = r + dx, c + dy
+                    if x < 0 or y < 0 or x >= m or y >= n or grid[x][y] != 0:
+                        continue
+                    grid[x][y] = -1
+                    q.append((x, y))
         count = len(q)
     return -1
 ```

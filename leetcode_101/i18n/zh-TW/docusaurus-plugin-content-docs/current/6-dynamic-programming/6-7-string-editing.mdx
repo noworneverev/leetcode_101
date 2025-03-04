@@ -77,6 +77,11 @@ def minDistance(word1: str, word2: str) -> int:
 
 </Tabs>
 
+### 複雜度分析
+- **時間複雜度**: $O(m \times n)$，因為我們需要遍歷 `m` x `n` 個狀態。
+- **空間複雜度**: $O(m \times n)$，因為我們使用了一個 `dp` 陣列來儲存所有子問題的解。
+
+
 ## [650. 2 Keys Keyboard](https://leetcode.com/problems/2-keys-keyboard/)
 
 ### 題目描述
@@ -136,3 +141,9 @@ def minSteps(n: int) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+- **時間複雜度**: $O(n \sqrt{n})$
+  - 對於 `i`，我們最多迴圈到 $\sqrt{i}$ 來尋找 `j`。
+- **空間複雜度**: $O(n)$
+  - 需要 `dp` 陣列來儲存 `0` 到 `n` 的值。

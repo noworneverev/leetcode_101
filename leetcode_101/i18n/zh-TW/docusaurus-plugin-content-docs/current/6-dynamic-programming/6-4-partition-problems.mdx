@@ -58,6 +58,12 @@ def numSquares(n: int) -> int:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n \sqrt{n})$，外層循環遍歷 $n$ 個數字，內層循環最多遍歷 $\sqrt{n}$ 個完全平方數。
+- **空間複雜度**: $O(n)$，需要一個長度為 $n+1$ 的一維陣列 `dp` 來記錄結果。
+
+
 ## [91. Decode Ways](https://leetcode.com/problems/decode-ways/)
 
 ### 題目描述
@@ -154,6 +160,12 @@ def numDecodings(s: str) -> int:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，需要遍歷字串一次。
+- **空間複雜度**: $O(n)$，使用了大小為 $n+1$ 的動態規劃陣列 `dp`。
+
+
 ## [139. Word Break](https://leetcode.com/problems/word-break/)
 
 ### 題目描述
@@ -220,6 +232,15 @@ def wordBreak(s: str, wordDict: List[str]) -> bool:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n \cdot m)$，其中 $n$ 是字串 `s` 的長度，$m$ 是字典中單詞的總數。
+  - 每次檢查 `s[i-m:i]` 的子串需要 $O(m)$。
+  - 外層需要遍歷字串長度 $n$。
+
+- **空間複雜度**: $O(n)$，動態規劃陣列 `dp` 的大小為 $n+1$。
+
 
 ## [1105. Filling Bookcase Shelves](https://leetcode.com/problems/filling-bookcase-shelves/)
 
@@ -293,6 +314,12 @@ def minHeightShelves(books: List[List[int]], shelfWidth: int) -> int:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n^2)$，外層迴圈遍歷每本書，內層迴圈檢查每個可能的行分割。
+- **空間複雜度**: $O(n)$，使用了長度為 $n+1$ 的 `dp` 陣列。
+
+
 ## [377. Combination Sum IV](https://leetcode.com/problems/combination-sum-iv/)
 
 ### 題目描述
@@ -345,3 +372,8 @@ def combinationSum4(nums: List[int], target: int) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n \times t)$，其中 $n$ 是數組 `nums` 的大小，$t$ 是目標值 `target`。外層遍歷 $target$，內層遍歷數字 `nums`。
+- **空間複雜度**: $O(t)$，`dp` 陣列的大小為 $target + 1$。

@@ -57,6 +57,11 @@ def maxProfit(prices: List[int]) -> int:
 
 </Tabs>
 
+### 複雜度分析
+- **時間複雜度**: $O(n)$，只需遍歷 `prices` 一次。
+- **空間複雜度**: $O(1)$，只使用了 `buy` 和 `sell` 兩個變數。
+
+
 ## [188. Best Time to Buy and Sell Stock IV](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/)
 
 ### 題目描述
@@ -113,6 +118,11 @@ def maxProfit(k: int, prices: List[int]) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+- **時間複雜度**: $O(n \times k)$，因為我們遍歷 `prices` (`O(n)`) 並對 `k` 進行更新 (`O(k)`)。
+- **空間複雜度**: $O(k)$，只使用了 `buy` 和 `sell` 陣列。
+
 
 ## [309. Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
 
@@ -181,3 +191,7 @@ def maxProfit(prices: List[int]) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+- **時間複雜度**: $O(n)$，因為只遍歷 `prices` 一次。
+- **空間複雜度**: $O(n)$，使用了 4 個大小為 `n` 的陣列 (`buy`, `sell`, `s1`, `s2`)。

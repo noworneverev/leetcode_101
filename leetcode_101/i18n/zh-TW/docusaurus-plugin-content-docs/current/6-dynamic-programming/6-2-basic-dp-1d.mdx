@@ -63,6 +63,12 @@ def climbStairs(n: int) -> int:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，需遍歷一次從 2 到 $n$ 的迴圈。
+- **空間複雜度**: $O(n)$，使用了一個長度為 $n+1$ 的陣列 `dp` 來儲存結果。
+
+
 進一步的，我們可以對動態規劃進行空間壓縮。因為 dp[i] 只與 dp[i-1] 和 dp[i-2] 有關，因此可以只用兩個變數來儲存 dp[i-1] 和 dp[i-2]，使得原來的 $O(n)$ 空間複雜度優化為 $O(1)$ 複雜度。
 
 <Tabs>
@@ -96,6 +102,11 @@ def climbStairs(n: int) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，需遍歷一次從 2 到 $n$ 的迴圈。
+- **空間複雜度**: $O(1)$，只使用了常數額外空間來儲存 `prev_prev`、`prev` 和 `cur`。
 
 
 ## [198. House Robber](https://leetcode.com/problems/house-robber/)
@@ -160,6 +171,12 @@ def rob(nums: List[int]) -> int:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，需遍歷一次從 2 到 $n$ 的迴圈。
+- **空間複雜度**: $O(n)$，使用了一個長度為 $n+1$ 的陣列 `dp` 來儲存子問題的結果。
+
+
 同樣的，我們可以像題目 70 那樣，對空間進行壓縮。由於 `dp[i]` 只與 `dp[i-1]` 和 `dp[i-2]` 有關，因此我們可以僅使用兩個變數來儲存這兩個值，將原來的 $O(n)$ 空間複雜度優化為 $O(1)$ 空間複雜度。
 
 <Tabs>
@@ -193,6 +210,12 @@ def rob(nums: List[int]) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，需遍歷一次列表 `nums`。
+- **空間複雜度**: $O(1)$，只使用了常數額外空間來儲存 `prev_prev`、`prev` 和 `cur`。
+
 
 ## [413. Arithmetic Slices](https://leetcode.com/problems/arithmetic-slices/)
 
@@ -247,3 +270,8 @@ def numberOfArithmeticSlices(nums: List[int]) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，需要遍歷列表 `nums` 一次。
+- **空間複雜度**: $O(n)$，使用了一個長度為 $n$ 的陣列 `dp` 來儲存子問題的結果。

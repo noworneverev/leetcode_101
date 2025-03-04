@@ -82,6 +82,12 @@ def minPathSum(grid: List[List[int]]) -> int:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(m \times n)$，需要遍歷整個網格。
+- **空間複雜度**: $O(m \times n)$，使用了一個大小為 $m \times n$ 的 `dp` 陣列。
+
+
 因為 dp 矩陣的每一個值只和左邊和上面的值相關，我們可以使用空間壓縮將 dp 陣列壓縮為一維。對於第 i 行，在遍歷到第 j 列的時候，因為第 j-1 列已經更新過了，所以 dp[j-1] 代表 dp[i][j-1] 的值；而 dp[j] 待更新，當前儲存的值是在第 i-1 行的時候計算的，所以代表 dp[i-1][j] 的值。
 
 :::warning
@@ -137,6 +143,11 @@ def minPathSum(grid: List[List[int]]) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(m \times n)$，需要遍歷整個網格。
+- **空間複雜度**: $O(n)$，只需記錄一行的結果。
 
 
 ## [542. 01 Matrix](https://leetcode.com/problems/01-matrix/)
@@ -228,12 +239,18 @@ def updateMatrix(matrix: List[List[int]]) -> List[List[int]]:
                     dp[i][j] = min(dp[i][j], dp[i + 1][j] + 1)
                 if j < n - 1:
                     dp[i][j] = min(dp[i][j], dp[i][j + 1] + 1)
-        return dp
+    return dp
 ```
 
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(m \times n)$，矩陣每個元素遍歷兩次。
+- **空間複雜度**: $O(m \times n)$，使用了與輸入矩陣相同大小的 `dp` 陣列。
+
 
 ## [221. Maximal Square](https://leetcode.com/problems/maximal-square/)
 
@@ -304,3 +321,8 @@ def maximalSquare(matrix: List[List[str]]) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(m \times n)$，遍歷矩陣每個位置一次。
+- **空間複雜度**: $O(m \times n)$，使用了與矩陣大小相同的 `dp` 陣列。

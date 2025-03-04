@@ -229,7 +229,7 @@ def updateMatrix(matrix: List[List[int]]) -> List[List[int]]:
                     dp[i][j] = min(dp[i][j], dp[i + 1][j] + 1)
                 if j < n - 1:
                     dp[i][j] = min(dp[i][j], dp[i][j + 1] + 1)
-        return dp
+    return dp
 ```
 
 </TabItem>

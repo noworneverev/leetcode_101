@@ -255,6 +255,13 @@ def canPartition(nums: List[int]) -> bool:
 
 </Tabs>
 
+### 複雜度分析
+- **時間複雜度**: $O(n \times target)$
+  - 需要遍歷 `n` 個數字，每個數字都需要計算 `target` 內的所有值。
+- **空間複雜度**: $O(n \times target)$
+  - 使用了 `dp` 陣列，大小為 $(n+1) \times (target+1)$。
+
+
 同樣的，我們也可以對本題進行空間壓縮。注意對數字和的遍歷需要逆向。
 
 <Tabs>
@@ -297,6 +304,10 @@ def canPartition(nums: List[int]) -> bool:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+- **時間複雜度**: $O(n \times target)$
+- **空間複雜度**: $O(target)$（只使用一個長度為 `target+1` 的陣列）
 
 ## [474. Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/)
 
@@ -364,6 +375,14 @@ def findMaxForm(strs: List[str], m: int, n: int) -> int:
 
 </Tabs>
 
+### 複雜度分析
+- **時間複雜度**: $O(L + m \times n \times L)$，其中 $L$ 是 `strs` 的長度：
+  - 計算 `0` 和 `1` 的數量：$O(L)$
+  - 更新 `dp` 陣列：$O(m \times n \times L)$
+  
+- **空間複雜度**: $O(m \times n)$，因為 `dp` 陣列的大小為 `m+1` x `n+1`。
+
+
 ## [322. Coin Change](https://leetcode.com/problems/coin-change/)
 
 ### 題目描述
@@ -421,3 +440,10 @@ def coinChange(coins: List[int], amount: int) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+- **時間複雜度**: $O(n \times m)$
+  - 其中 `n = amount`，`m = len(coins)`。
+  - 內層迴圈遍歷 `coins`，外層遍歷 `amount`，總共 $O(n \times m)$.
+- **空間複雜度**: $O(n)$
+  - 使用了一個 `dp` 陣列，大小為 `amount + 1`。

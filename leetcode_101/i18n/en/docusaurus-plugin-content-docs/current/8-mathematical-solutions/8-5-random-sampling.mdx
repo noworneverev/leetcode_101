@@ -140,9 +140,9 @@ class Solution:
         for i in range(1, len(weights)):
             self.cumsum[i] += self.cumsum[i - 1]
 
-        def pickIndex(self) -> int:
-            val = random.randint(1, self.cumsum[-1])
-            return bisect.bisect_left(self.cumsum, val, 0, len(self.cumsum))
+    def pickIndex(self) -> int:
+        val = random.randint(1, self.cumsum[-1])
+        return bisect.bisect_left(self.cumsum, val, 0, len(self.cumsum))
 ```
 
 </TabItem>

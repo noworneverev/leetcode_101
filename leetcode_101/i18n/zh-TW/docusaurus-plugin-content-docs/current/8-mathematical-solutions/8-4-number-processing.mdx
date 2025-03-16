@@ -66,6 +66,13 @@ def convertToBase7(num: int) -> str:
 
 </Tabs>
 
+### 複雜度分析
+- **時間複雜度**: $O(\log_7 n)$  
+  - 每次將 `num` 除以 `7`，最多執行 $O(\log_7 n)$ 次。
+- **空間複雜度**: $O(\log_7 n)$  
+  - 需要儲存 `base7` 字串，長度約為 $O(\log_7 n)$。
+
+
 ## [172. Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/)
 
 ### 題目描述
@@ -107,6 +114,14 @@ def trailingZeroes(n: int) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+- **時間複雜度**: $O(\log_5 n)$  
+  - 因為每次遞迴 `n` 都會除以 `5`，最多執行 $O(\log_5 n)$ 次。
+
+- **空間複雜度**: $O(\log_5 n)$（遞迴堆疊的深度）
+  - 遞迴呼叫次數最多 $O(\log_5 n)$ 層。
+
 
 ## [415. Add Strings](https://leetcode.com/problems/add-strings/)
 
@@ -181,6 +196,12 @@ def addStrings(num1: str, num2: str) -> str:
 
 </Tabs>
 
+### 複雜度分析
+- **時間複雜度**: $O(\max(m, n))$  
+  - 需要遍歷 `num1` 和 `num2`，最多遍歷 `max(m, n)` 位數。
+- **空間複雜度**: $O(\max(m, n))$  
+  - 儲存 `added_str`，最多 `max(m, n) + 1` 位（考慮進位）。
+
 
 ## [326. Power of Three](https://leetcode.com/problems/power-of-three/)
 
@@ -249,6 +270,13 @@ def isPowerOfThree(n: int) -> bool:
 
 </Tabs>
 
+### 複雜度分析
+- **時間複雜度**: $O(\log_3 n)$  
+  - `n` 每次都除以 `3`，最多執行 $O(\log_3 n)$ 次。
+- **空間複雜度**: $O(1)$  
+  - 只使用常數變數，沒有額外的空間需求。
+
+
 ## [50. Pow(x, n)](https://leetcode.com/problems/powx-n/)
 
 ### 題目描述
@@ -313,3 +341,9 @@ def myPow(x: float, n: int) -> float:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+- **時間複雜度**: $O(\log n)$  
+  - 每次計算 `n` 都會減半 (`n / 2`)，最多執行 $O(\log n)$ 次。
+- **空間複雜度**: $O(\log n)$  
+  - 遞迴深度最多為 $O(\log n)$ 。

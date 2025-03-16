@@ -86,6 +86,13 @@ class Solution:
 
 </Tabs>
 
+### 複雜度分析
+- **時間複雜度**: `O(n)`  
+  - `shuffle()` 需要遍歷陣列一次，每次隨機交換 `O(1)`，總共 `O(n)`.
+- **空間複雜度**: `O(n)`  
+  - `self.base` 需要存一份原始數據，`shuffle()` 需要複製陣列，因此 `O(n)`.
+
+
 ## [528. Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)
 
 ### 題目描述
@@ -142,14 +149,25 @@ class Solution:
         for i in range(1, len(weights)):
             self.cumsum[i] += self.cumsum[i - 1]
 
-        def pickIndex(self) -> int:
-            val = random.randint(1, self.cumsum[-1])
-            return bisect.bisect_left(self.cumsum, val, 0, len(self.cumsum))
+    def pickIndex(self) -> int:
+        val = random.randint(1, self.cumsum[-1])
+        return bisect.bisect_left(self.cumsum, val, 0, len(self.cumsum))
 ```
 
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+- **建構函數 (`__init__`)**: `O(n)`  
+  - 計算 `cumsum` 需要遍歷一次 `weights` 陣列。
+
+- **隨機選擇 (`pickIndex()`)**: `O(log n)`  
+  - `random.randint(1, sum(weights))` 需要 `O(1)` 時間。
+  - `bisect.bisect_left()` **使用二分搜尋，時間複雜度為 `O(log n)`**。
+
+- **空間複雜度**: `O(n)`  
+  - `cumsum` 陣列需要 `O(n)` 的額外空間存儲累積和。
 
 ## [382. Linked List Random Node](https://leetcode.com/problems/linked-list-random-node/)
 
@@ -232,3 +250,10 @@ class Solution:
 </TabItem>
 
 </Tabs>
+
+
+### 複雜度分析
+- **時間複雜度**: `O(n)`  
+  - 需要遍歷整個鏈結串列一次。
+- **空間複雜度**: `O(1)`  
+  - 只使用了 `pick` 和 `i` 兩個變數。

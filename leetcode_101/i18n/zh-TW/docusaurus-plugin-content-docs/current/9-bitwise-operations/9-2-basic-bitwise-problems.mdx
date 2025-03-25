@@ -12,7 +12,7 @@ sidebar_position: 45
 
 ### 輸入輸出範例
 
-输入是两个十进制整数，输出是一个十进制整数，表示两个输入数字的汉明距离。
+輸入是兩個十進位整數，輸出是一個十進位整數，表示兩個輸入數字的漢明距離。
 
 ```
 Input: x = 1, y = 4
@@ -55,6 +55,14 @@ def hammingDistance(x: int, y: int) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: `O(log n)`  
+  - `n` 是 `x ^ y` 的二進位長度，最多遍歷 `log n` 次。
+- **空間複雜度**: `O(1)`  
+  - 只用了 `diff` 和 `dist` 變數。
+
 
 ## [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/)
 
@@ -106,6 +114,11 @@ def reverseBits(n: int) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: `O(32) = O(1)`，因為固定執行 32 次位元操作。
+- **空間複雜度**: `O(1)`，只用了少量變數。
 
 ## [136. Single Number](https://leetcode.com/problems/single-number/)
 
@@ -177,3 +190,8 @@ def singleNumber(nums: List[int]) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: `O(n)`，因為我們只遍歷陣列一次。
+- **空間複雜度**: `O(1)`，只用了 `single` 變數，沒有額外儲存空間。

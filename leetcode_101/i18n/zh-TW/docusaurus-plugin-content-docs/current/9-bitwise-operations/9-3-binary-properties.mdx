@@ -74,6 +74,16 @@ def maxProduct(words: List[str]) -> int:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: `O(n + n²) ≈ O(n²)`
+  - 建立 `mask` 陣列: `O(n * m)` (`m` 為單詞長度，最多 26) → **O(n)**
+  - 兩層迴圈計算最大乘積: `O(n²)`  
+  
+- **空間複雜度**: `O(n)`
+  - `cache` 存 `n` 個 `mask`
+
+
 ## [338. Counting Bits](https://leetcode.com/problems/counting-bits/)
 
 ### 題目描述
@@ -123,3 +133,8 @@ def countBits(n: int) -> List[int]:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，每個數字只需要計算一次。
+- **空間複雜度**: $O(n)$，用一個陣列儲存每個數字的 1 的數量。

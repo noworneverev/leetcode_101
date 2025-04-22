@@ -60,6 +60,12 @@ def findDisappearedNumbers(nums: List[int]) -> List[int]:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，只遍歷兩次 nums。
+- **空間複雜度**: $O(1)$（不算回傳值），透過**原地標記**避免額外空間。
+
+
 ## [48. Rotate Image](https://leetcode.com/problems/rotate-image/)
 
 ### 題目描述
@@ -129,6 +135,12 @@ def rotate(matrix: List[List[int]]) -> None:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n^2)$，每個元素最多處理一次。
+- **空間複雜度**: $O(1)$，原地修改，沒有額外空間。
+
+
 ## [240. Search a 2D Matrix II](https://leetcode.com/problems/search-a-2d-matrix-ii/)
 
 ### 題目描述
@@ -194,6 +206,12 @@ def searchMatrix(matrix: List[List[int]], target: int) -> bool:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(m + n)$，最多走到底或最左
+- **空間複雜度**: $O(1)$，只用常數變數
+
+
 ## [769. Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted/)
 
 ### 題目描述
@@ -246,3 +264,8 @@ def maxChunksToSorted(arr: List[int]) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，遍歷一次陣列
+- **空間複雜度**: $O(1)$，只用了常數變數

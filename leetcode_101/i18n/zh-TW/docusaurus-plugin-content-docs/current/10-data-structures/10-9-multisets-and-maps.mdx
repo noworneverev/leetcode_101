@@ -85,3 +85,11 @@ def findItinerary(tickets: List[List[str]]) -> List[str]:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n \log n)$，$n$ 為機票數量
+  - 構建圖為 $O(n)$
+  - 每個鄰接表的排序總和為 $O(n \log n)$
+  - DFS 遍歷每張票剛好一次，$O(n)$
+- **空間複雜度**: $O(n)$，儲存圖與答案

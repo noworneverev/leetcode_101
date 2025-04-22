@@ -101,6 +101,14 @@ class MyQueue:
 
 </Tabs>
 
+### 複雜度分析
+
+- **push**: $O(1)$
+- **pop / peek**: 均攤 $O(1)$（最壞 $O(n)$，但每個元素最多只搬一次）
+- **empty**: $O(1)$
+- **空間複雜度**: $O(n)$，儲存所有元素
+
+
 ## [155. Min Stack](https://leetcode.com/problems/min-stack/)
 
 ### 題目描述
@@ -189,6 +197,12 @@ class MinStack:
 
 </Tabs>
 
+### 複雜度分析
+
+- **push / pop / top / getMin**: $O(1)$
+- **空間複雜度**: $O(n)$，因為最壞情況下 `min_s` 會和 `s` 一樣長（當元素遞減時）
+
+
 
 ## [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 
@@ -255,3 +269,8 @@ def isValid(s: str) -> bool:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，每個字元最多進出堆疊一次。
+- **空間複雜度**: $O(n)$，最壞情況下堆疊存所有左括號。

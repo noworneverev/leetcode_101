@@ -201,6 +201,13 @@ def mergeKLists(lists: List[Optional[ListNode]]) -> Optional[ListNode]:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(N \log k)$，其中 $N$ 為所有節點總數，$k$ 為串列數。
+  - 每個節點最多進出堆一次，堆的大小最多為 $k$
+- **空間複雜度**: $O(k)$，堆的最大大小為 $k$
+
+
 ## [218. The Skyline Problem](https://leetcode.com/problems/the-skyline-problem/)
 
 ### 題目描述
@@ -294,3 +301,9 @@ def getSkyline(buildings: List[List[int]]) -> List[List[int]]:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n \log n)$
+  - 每個建築最多進出堆一次，堆操作是 $\log n$
+- **空間複雜度**: $O(n)$，堆最多存下所有同時存在的建築

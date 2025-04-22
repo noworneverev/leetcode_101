@@ -64,6 +64,13 @@ class NumArray:
 
 </Tabs>
 
+### 複雜度分析
+
+- **初始化時間複雜度**: $O(n)$，需要一次性建立前綴和
+- **查詢時間複雜度**: $O(1)$，透過前綴和直接計算差值
+- **空間複雜度**: $O(n)$，儲存前綴和陣列
+
+
 ## [304. Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/)
 
 ### 題目描述
@@ -168,6 +175,13 @@ class NumMatrix:
 
 </Tabs>
 
+### 複雜度分析
+
+- **初始化時間複雜度**: $O(m \times n)$，建立一次前綴和矩陣
+- **查詢時間複雜度**: $O(1)$，只需要查詢與相減 4 個位置
+- **空間複雜度**: $O(m \times n)$，用來儲存前綴和表
+
+
 ## [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
 
 ### 題目描述
@@ -224,3 +238,7 @@ def subarraySum(nums: List[int], k: int) -> int:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，其中 $n$ 為 `nums` 長度，每個元素只走一次。
+- **空間複雜度**: $O(n)$，最壞情況下所有前綴和都不同，需儲存 $n$ 個前綴和。

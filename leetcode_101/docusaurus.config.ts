@@ -103,7 +103,7 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "https://github.com/changgyhub/leetcode_101",
+          href: "https://github.com/noworneverev/leetcode_101",
           label: "GitHub",
           position: "right",
         },
@@ -152,7 +152,7 @@ const config: Config = {
       //     ],
       //   },
       // ],
-      copyright: `Copyright © ${new Date().getFullYear()} Chang Gao. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Chang Gao.`,
     },
     prism: {
       theme: prismThemes.github,

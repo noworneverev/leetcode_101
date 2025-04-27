@@ -56,6 +56,13 @@ def isAnagram(s: str, t: str) -> bool:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，其中 $n$ 為字串長度
+  - 計數 `s` 和扣減 `t` 都是一次線性掃描。
+- **空間複雜度**: $O(1)$，因為英文字母數量固定為 26 個（常數級別的額外空間）。
+
+
 ## [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)
 
 ### 題目描述
@@ -114,6 +121,12 @@ def isIsomorphic(s: str, t: str) -> bool:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，其中 $n$ 是字串長度，只需要一次遍歷。
+- **空間複雜度**: $O(1)$，因為陣列大小固定為 128（ASCII），屬於常數空間。
+
 
 ## [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
 
@@ -188,6 +201,14 @@ def countSubstrings(s: str) -> int:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n^2)$，其中 $n$ 是字串長度。
+  - 每個中心向外擴展，最壞要擴展 $O(n)$ 次。
+  - 有 $2n-1$ 個中心需要檢查（奇數中心 + 偶數中心）。
+- **空間複雜度**: $O(1)$，只使用了常數額外空間。
+
+
 ## [696. Count Binary Substrings](https://leetcode.com/problems/count-binary-substrings/)
 
 ### 題目描述
@@ -257,6 +278,12 @@ def countBinarySubstrings(s: str) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，其中 $n$ 是字串長度，只需要一次遍歷。
+- **空間複雜度**: $O(1)$，只用了常數空間追蹤 prev、cur、count。
+
 
 ## [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
 
@@ -348,3 +375,8 @@ def minRemoveToMakeValid(s: str) -> str:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，其中 $n$ 是字串長度，因為只掃描兩遍字串。
+- **空間複雜度**: $O(n)$，主要是用來儲存 `to_delete` 集合，最壞情況下可能標記全部字元。

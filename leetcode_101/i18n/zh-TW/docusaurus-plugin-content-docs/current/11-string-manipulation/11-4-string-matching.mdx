@@ -104,3 +104,10 @@ def strStr(haystack: str, needle: str) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(m + n)$，其中 $m$ 是 haystack 長度，$n$ 是 needle 長度。
+  - 建立部分匹配表 (dp array) 需要 $O(n)$。
+  - 掃描 haystack 比對需要 $O(m)$。
+- **空間複雜度**: $O(n)$，儲存 dp table 需要額外空間。

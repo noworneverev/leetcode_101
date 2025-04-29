@@ -16,12 +16,12 @@ sidebar_position: 66
 
 ```
 Input:
-A: a1 -> a2
-         |
-         v
-         c1 -> c2 -> c3
-         ^
-         |
+A:        a1 -> a2
+                |
+                v
+                c1 -> c2 -> c3
+                ^
+                |
 B: b1 -> b2 -> b3
 Output: c1
 ```
@@ -64,6 +64,12 @@ def getIntersectionNode(
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(m + n)$，其中 $m$ 是 headA 長度，$n$ 是 headB 長度，兩條鏈結串列各遍歷一次。
+- **空間複雜度**: $O(1)$，只用了兩個指標。
+
 
 ## [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
 
@@ -141,3 +147,8 @@ def isPalindrome(head: Optional[ListNode]) -> bool:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，其中 $n$ 是鏈結串列長度，快慢指標找中點、翻轉、比較都是線性時間。
+- **空間複雜度**: $O(1)$，除了幾個指標變數之外，不需要額外空間（翻轉是在原地進行的）。

@@ -58,6 +58,12 @@ def maxDepth(root: Optional[TreeNode]) -> int:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，其中 $n$ 是樹的節點數，每個節點都會被拜訪一次。
+- **空間複雜度**: $O(h)$，其中 $h$ 是樹的高度，用於遞迴堆疊（最壞情況是 $O(n)$，最好的情況是平衡樹 $O(\log n)$）。
+
+
 ## [110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
 
 ### 題目描述
@@ -130,6 +136,12 @@ def isBalanced(root: Optional[TreeNode]) -> bool:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，其中 $n$ 是樹的節點數，每個節點只被拜訪一次。
+- **空間複雜度**: $O(h)$，其中 $h$ 是樹的高度，遞迴堆疊最壞情況是 $O(n)$（鏈狀樹），平均為 $O(\log n)$（平衡樹）。
+
 
 ## [543. Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
 
@@ -205,6 +217,12 @@ def diameterOfBinaryTree(root: Optional[TreeNode]) -> int:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，其中 $n$ 是節點數，每個節點只拜訪一次。
+- **空間複雜度**: $O(h)$，其中 $h$ 是樹的高度，用於遞迴堆疊（最壞 $O(n)$，平均 $O(\log n)$）。
+
 
 ## [437. Path Sum III](https://leetcode.com/problems/path-sum-iii/)
 
@@ -292,6 +310,12 @@ def pathSum(root: Optional[TreeNode], targetSum: int) -> int:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n^2)$，最壞情況下對每個節點都做一次深度遞迴（例如鏈狀樹）
+- **空間複雜度**: $O(h)$，遞迴堆疊深度，$h$ 是樹的高度（最壞 $O(n)$，平均 $O(\log n)$）
+
+
 ## [101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
 
 ### 題目描述
@@ -377,6 +401,12 @@ def isSymmetric(root: Optional[TreeNode]) -> bool:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，其中 $n$ 是樹的節點數，每個節點最多拜訪一次。
+- **空間複雜度**: $O(h)$，其中 $h$ 是樹的高度，遞迴堆疊最壞 $O(n)$（鏈狀樹），平均 $O(\log n)$。
+
 
 ## [1110. Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest/)
 
@@ -479,3 +509,8 @@ def delNodes(root: Optional[TreeNode], to_delete: List[int]) -> List[TreeNode]:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，每個節點只拜訪一次，其中 $n$ 是樹的節點數。
+- **空間複雜度**: $O(n)$，遞迴堆疊最壞 $O(n)$，森林最多可能包含 $n$ 棵單一節點。

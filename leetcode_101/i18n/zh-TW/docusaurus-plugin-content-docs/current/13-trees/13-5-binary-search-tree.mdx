@@ -115,6 +115,12 @@ def recoverTree(root: Optional[TreeNode]) -> None:
 
 </Tabs>
 
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，每個節點遍歷一次（中序遍歷）。
+- **空間複雜度**: $O(h)$，其中 $h$ 是樹的高度，遞迴堆疊空間。
+
+
 ## [669. Trim a Binary Search Tree](https://leetcode.com/problems/trim-a-binary-search-tree/)
 
 ### 題目描述
@@ -187,3 +193,8 @@ def trimBST(
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(n)$，其中 $n$ 為樹中節點數，最壞情況需要訪問每個節點。
+- **空間複雜度**: $O(h)$，其中 $h$ 是樹的高度，為遞迴堆疊使用的空間。

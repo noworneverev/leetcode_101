@@ -88,3 +88,9 @@ def isBipartite(graph: List[List[int]]) -> bool:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**: $O(V + E)$，其中 $V$ 是節點數，$E$ 是邊數。
+  - 每個節點最多進 queue 一次，每條邊最多檢查兩次。
+- **空間複雜度**: $O(V)$，用於記錄節點的顏色與 BFS 隊列。

@@ -163,6 +163,15 @@ class LRUCache:
             self.cache.pop(next(iter(self.cache)))
 ```
 
+### 複雜度分析
+
+- **時間複雜度**:
+  - `get` 操作: 平均 $O(1)$，但因為使用的是內建 `dict` 搭配 `pop()` 和 `iter()`，在某些 Python 實作中可能會有最壞 $O(n)$。
+  - `put` 操作: 平均 $O(1)$，但 `pop(next(iter(...)))` 同樣可能在最壞情況下達到 $O(n)$。
+
+- **空間複雜度**: $O(n)$，其中 $n$ 是快取容量 `capacity`，用來儲存最多 $n$ 個鍵值對。
+
+
 ## [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)
 
 ### 題目描述
@@ -254,3 +263,12 @@ class RandomizedSet:
 </TabItem>
 
 </Tabs>
+
+### 複雜度分析
+
+- **時間複雜度**:
+  - `insert`: $O(1)$，使用雜湊表檢查是否存在並在陣列末尾加入元素。
+  - `remove`: $O(1)$，將待刪除元素與最後一個元素交換位置後移除，並更新雜湊表。
+  - `getRandom`: $O(1)$，隨機從陣列中取值。
+
+- **空間複雜度**: $O(n)$，其中 $n$ 是集合中最多的元素數量，儲存在 `nums` 與 `v_to_k` 中。
